@@ -4,6 +4,8 @@ import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import postgres from "postgres";
 
+const sql = postgres();
+
 const FormSchema = z.object({
   id: z.string(),
   customerId: z.string(),
